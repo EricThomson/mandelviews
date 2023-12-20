@@ -1,7 +1,7 @@
 name: Build and upload to TestPyPI for pure python
 on:
-  release:
-    types: [published]
+  push:
+    # types: [published]
 
 jobs:
   build:
