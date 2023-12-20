@@ -1,5 +1,5 @@
 name: Build and upload to TestPyPI for pure python
-on: push
+on: workflow_displatch
     # types: [published]
 
 jobs:
