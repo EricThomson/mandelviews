@@ -1,5 +1,5 @@
 """
-not a real test, just want to test workflow
+a silly test just to make sure testing pipeline is functioning properly for ci/cd
 """
 import math
 
