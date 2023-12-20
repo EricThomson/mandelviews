@@ -43,10 +43,6 @@ jobs:
         run: |
           pip install "$(ls dist/*whl)[dev]"
 
-
-       - name: List contents of dist/
-          run: ls dist/
-          
       - name: Run tests
         # modify the following as necessary to e.g., run notebooks
         run: |
@@ -64,20 +60,14 @@ jobs:
   publish:
     name: Publish release to Test PyPI
     needs: [build]
-
-    environment:
-      name: pypi-test
-      url: https://test.pypi.org/p/mandelviews
-
+    environment: pypi-test
     runs-on: ubuntu-latest
     permissions:
       id-token: write # IMPORTANT: this permission is mandatory for trusted publishing
-
     steps:
-      - name: Download the release 
       - uses: actions/download-artifact@v3
         with:
-          name: python-package
+          name: artifact
           path: dist/
       - name: Publish package to test pypi
         uses: pypa/gh-action-pypi-publish@release/v1
