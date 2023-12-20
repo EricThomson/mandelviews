@@ -1,9 +1,15 @@
 # mandelviews
-Mandelbrot viewer that follows the guidelines set out at the CCN template:    
+Mandelbrot viewer:
+
+![mandelbrot set][./docs/images/mandelviews_example.jpg]
+
+Currently implements calculation of mandelbrot set in pure Python, visualization in matplotlib.
+ 
+
+Repo built following the guidelines set out at the CCN template:    
  https://github.com/flatironinstitute/ccn-template
 
- Implements calculation of mandelbrot set in pure Python, visualization in matplotlib.
- 
+
 For more details on construction of the Mandelbrot set using the escape time 
 algorithm:        
 https://complex-analysis.com/content/mandelbrot_set.html
