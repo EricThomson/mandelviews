@@ -51,11 +51,13 @@ jobs:
           # the src/ layout, this shouldn't be an issue, see structure note).
           cd tests/
           pytest -v
+
+      - name: Upload results to dist
       - uses: actions/upload-artifact@v3
         with:
           name: python-package
           path: dist/
-          
+
       - name: List contents of dist/
           run: ls dist/
         
