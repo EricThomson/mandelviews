@@ -53,22 +53,27 @@ jobs:
           pytest -v
       - uses: actions/upload-artifact@v3
         with:
-          path: dist/*
+          name: python-package
+          path: dist/
 
   publish:
-    name: Upload release to Test PyPI
+    name: Publish release to Test PyPI
     needs: [build]
+
     environment:
       name: pypi-test
       url: https://test.pypi.org/p/mandelviews
+
     runs-on: ubuntu-latest
     permissions:
       id-token: write # IMPORTANT: this permission is mandatory for trusted publishing
+
     steps:
+      - name: Download the release 
       - uses: actions/download-artifact@v3
         with:
-          name: artifact
-          path: dist
+          name: python-package
+          path: dist/
       - name: Publish package to test pypi
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
