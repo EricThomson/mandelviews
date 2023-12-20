@@ -51,7 +51,9 @@ jobs:
           # the src/ layout, this shouldn't be an issue, see structure note).
           cd tests/
           pytest -v
-
+      - uses: actions/upload-artifact@v3
+        with:
+          path: dist/*
 
   publish:
     name: Upload release to Test PyPI
