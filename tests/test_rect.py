@@ -1,3 +1,6 @@
+"""
+not a real test, just putting a file in tests/
+"""
 import matplotlib.pyplot as plt
 from mandelviews import draw_rect
 
