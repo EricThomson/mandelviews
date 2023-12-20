@@ -1,9 +1,9 @@
 # mandelviews
-Mandelbrot viewer:
+Mandelbrot viewer
 
-![mandelbrot set][./docs/images/mandelviews_example.jpg]
+![mandelbrot set](./docs/images/mandelviews_example.jpg)
 
-Currently implements calculation of mandelbrot set in pure Python, visualization in matplotlib.
+Calculates Mandelbrot Set in pure Python, Visualizes with matplotlib.
  
 
 Repo built following the guidelines set out at the CCN template:    
