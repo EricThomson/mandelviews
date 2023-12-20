@@ -42,19 +42,16 @@ jobs:
         shell: bash
         run: |
           pip install "$(ls dist/*whl)[dev]"
-      - name: Run some tests
+
+      - name: Run tests
         # modify the following as necessary to e.g., run notebooks
-        env:
-          PYTEST_ADDOPTS: -W ignore::DeprecationWarning
         run: |
           # note that we change directories to ensure we're using the installed
           # version of the package, not the local one (though if you're using
           # the src/ layout, this shouldn't be an issue, see structure note).
           cd tests/
-          pytest .
-      - uses: actions/upload-artifact@v3
-        with:
-          path: dist/*
+          pytest -v
+
 
   publish:
     name: Upload release to Test PyPI
