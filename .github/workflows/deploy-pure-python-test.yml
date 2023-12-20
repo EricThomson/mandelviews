@@ -55,7 +55,10 @@ jobs:
         with:
           name: python-package
           path: dist/
-
+          
+      - name: List contents of dist/
+          run: ls dist/
+        
   publish:
     name: Publish release to Test PyPI
     needs: [build]
