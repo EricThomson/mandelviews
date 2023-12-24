@@ -1,7 +1,5 @@
 name: Build and upload to TestPyPI for pure python
 on: workflow_dispatch
-    # types: [published]
-
 jobs:
   build:
     name: Build and test package
@@ -51,7 +49,6 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           path: dist/*
-
 
         
   publish:
