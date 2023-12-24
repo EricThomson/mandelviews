@@ -1,4 +1,4 @@
-name: Build and upload to TestPyPI for pure python
+name: Build and upload to PyPI for pure python
 on: workflow_dispatch 
 jobs:
   build:
