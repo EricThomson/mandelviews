@@ -1,5 +1,5 @@
 name: Build and upload to TestPyPI for pure python
-on: workflow_dispatch
+on: push
     # types: [published]
 
 jobs:
@@ -28,7 +28,7 @@ jobs:
        # because the following two tests will be weird otherwise. see
        # https://askubuntu.com/a/454568 for why this is the right way to handle
        # it. using [[ BOOLEAN ]] || EXPR is a compact way of writing IF NOT
-      # BOOLEAN THEN EXPR in bash
+       # BOOLEAN THEN EXPR in bash
        run: |
          [[ $(find dist/ -type f -name "*whl" -printf x | wc -c) == 1 ]] || exit 1
          [[ $(find dist/ -type f -name "*tar.gz" -printf x | wc -c) == 1 ]] || exit 1
@@ -58,7 +58,7 @@ jobs:
 
 
 publish-to-pypi:
-  name: Publish release to pypi
+  - name: Publish release to pypi
   needs: [build]
   runs-on: ubuntu-latest
   environment: pypi-deploy
