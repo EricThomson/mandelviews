@@ -64,7 +64,7 @@ def create_mandelimage_py(xmin: float = -2.0,
     """ Generate mandelbrot image given bounds/iterations using pure python.
 
     Given appropritae bounds, maxiters, and number of points between bounds, 
-    generate the 2d image showing which values diverged and didn't. Uses the
+    generate the 2d image showing which regions are in the Mandelbrot set. Uses the
     the pure python function mandelbrot_py. This will be very slow if you have lots of
     iterations. 
 
@@ -106,6 +106,6 @@ if __name__ == '__main__':
     #%% CALCULATE using core functions
     print("Pure python extraction no zoom")
     start_time_py0 = time.time()
-    mandelimage_py0 = create_mandelimage_py()
+         
     run_time_py0 = time.time() - start_time_py0
     print(f"\tRun time {run_time_py0} seconds: {run_time_py0/60:0.2f} minutes")
