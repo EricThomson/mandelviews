@@ -1,9 +1,7 @@
 # mandelviews
-Mandelbrot viewer
+Calculate and visualize the Mandelbrot set.
 
 ![mandelbrot set](./docs/images/mandelviews_example.jpg)
-
-Calculates Mandelbrot Set in pure Python, Visualizes with matplotlib.
 
 To install: `pip install mandelviews` 
 
