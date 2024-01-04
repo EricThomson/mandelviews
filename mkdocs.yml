@@ -18,4 +18,4 @@ nav:
   - mandelviews home: index.md
   - Quick Start Guide: quick_start.md
   - Usage Guide: usage_guide.md
-  - API reference: reference.md
+  - API reference: api_reference.md
