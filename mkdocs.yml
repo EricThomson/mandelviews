@@ -1,13 +1,14 @@
 site_name: mandelviews docs
 
 theme:
-  name: "material"
+  name: material
 
 plugins:
     - search                           # make sure the search plugin is enabled
     - mkdocstrings:                    # plugin for generating documentation from Python docstrings
         handlers:                      # handler is responsible for loading and parsing source files
           python:                      # set handler is for Python
+            paths: [src]               # without this it didn't find package
             options:                   # configuration of options for the Python handler
               docstring_style: numpy   # style of docstrings (convention followed)
               show_source: true        # include a link to the source code
@@ -15,7 +16,7 @@ plugins:
                                        # If set to 'source', it means the order in the source code will be maintained.
 
 nav:
-  - mandelviews home: index.md
+  - Docs Home: index.md
   - Quick Start Guide: quick_start.md
   - Usage Guide: usage_guide.md
   - API reference: api_reference.md

@@ -1,7 +1,5 @@
 # mandelviews: Usage Guide
 
-Beyond the [Quickstart Guide](quickstart_guide.md). 
-
 Escape time algorithm. Calculate whether a complex number is in the mandelbrot set.
 
 Code adapted from multiple sources:    

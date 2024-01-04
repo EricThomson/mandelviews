@@ -1,7 +1,7 @@
-# mandelviews documentation home
+# mandelviews documentation
 mandelviews is a package for calculating and visualizing the Mandelbrot set.
 
-There are already many libraries that do this. Here, the focus is not on providing new functionality, but on providing a working instance of a project that follows the suggestions at the CCN template repo:  
+There are already many libraries that do this. Here, the focus is not on providing new functionality, but on providing a working instance of a project that follows the suggestions for software projects at the CCN template repo:  
 https://github.com/flatironinstitute/ccn-template
 
 ## Installation
@@ -26,4 +26,4 @@ For the full documentation for each function by category, see the [API Reference
 In the future, we plan to add numba and cython implementations of the Mandelbrot set calculation. This will allow for expanded demonstration of how to do tricky things like distribute compiled (cython) code at pip, among other things.
 
 ## Acknowledgments
-- Code written with support of Flatiron Center for Computational Neuroscience, and the neuroRSE team. 
+Code written with support of Flatiron Center for Computational Neuroscience, and the neuroRSE team. 
