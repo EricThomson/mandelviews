@@ -1,9 +1,7 @@
 """
-vis.py
+mandelviews/vis.py
 
 mandelviews visualization functions 
-
-Plot mandelbrot image in matplotlib, and overlay rectangle.
 """
 #%%
 import matplotlib.pyplot as plt
@@ -21,7 +19,7 @@ def display_mandelimage_mpl(image: np.ndarray,
                             y_range: ArrayLike, 
                             cmap: Colormap ='magma',
                             ax: plt.Axes = None,
-                            show_axis: bool = True):
+                            show_axis: bool = True) -> plt.Axes:
     """Display image of mandelbrot set using matplotlib
     
     Parameters
@@ -41,7 +39,8 @@ def display_mandelimage_mpl(image: np.ndarray,
 
     Returns
     -------
-    ax: mpl axes object
+    ax: plt.Axes object
+        Axes object upon which display is rendered
 
     Notes
     -----
@@ -61,26 +60,28 @@ def display_mandelimage_mpl(image: np.ndarray,
 def draw_rect(rect_coords, 
               color: Any ='white', 
               line_width: float = 0.5, 
-              ax: plt.Axes = None):
+              ax: plt.Axes = None) -> tuple[plt.Axes, Rectangle]:
     """Draw a single unfilled rectangle on given axes object.
 
     Helper function to plot on mandelbrot image to find interesting regions to zoom in on.
     
     Parameters
     ----------
-        rect_coords: array-like
-            Standard bounding-box format: [rect_xmin, rect_ymin, rect_xmax, rect_ymax] 
-        color: matplotlib color
-            string or rgb for color of the line
-        line_width : float
-            width of the line for rectangle
-        ax : pyplot.Axes object 
-            axes object upon which rectangle will be drawn, default None
+    rect_coords: ArrayLike
+        Standard bounding-box format: [rect_xmin, rect_ymin, rect_xmax, rect_ymax] 
+    color: matplotlib color
+        string or rgb for color of the line
+    line_width: float
+        width of the line for rectangle
+    ax: pyplot.Axes object 
+        axes object upon which rectangle will be drawn, default None
     
     Returns
     -------
-        ax: pyplot.Axes object
-        rect: matplotlib Rectangle object
+    ax: plt.Axes object
+        Axes object upon which display is rendered
+    rect: Rectangle object
+        Instance of Rectangle class draw by function
     """   
     if ax is None:
         f, ax = plt.subplots()

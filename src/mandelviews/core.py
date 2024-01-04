@@ -1,15 +1,7 @@
 """
-mandelviews_core.py
+mandelviews/mandelviews_core.py
 
-Implement core back-end functions in mandelviews package
-
-Calculate whether a complex number is in the mandelbrot set, and 
-calculate the same for an entire array generating an image.
-
-Code adapted from multiple sources: 
-https://github.com/NIH-HPC/python-in-hpc
-https://holoviews.org/gallery/apps/bokeh/mandelbrot.html
-https://numba.pydata.org/numba-doc/0.21.0/user/examples.html
+Implement core functions for calculating Mandelbrot set inclusion.
 """
 
 #%% imports and function definitions  
@@ -33,13 +25,14 @@ def mandelbrot_py(creal: float,
         Real part of the complex number
     cimag: float
         Imaginary part of the complex number
-    maxiter: int
-        number of iterations to go check divergence: determines accuracy
+    maxiters: int
+        max number of iterations to check divergence: determines accuracy
 
     Returns
     -------
     n: int
-        How many iterations to diverge (scaled from 0 to 255), if not divergent, returns 255.
+        How many iterations to diverge (scaled from 0 to 255). 
+        If not divergent, returns 255.
     """
     real = creal
     imag = cimag
