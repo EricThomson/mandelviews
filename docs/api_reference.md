@@ -1,8 +1,8 @@
-# Reference
-Docs for the different functions available in mandelviews. Why aren't they showing properly they look fubar. 
+# mandelviews Reference
+Docs for the different functions available in mandelviews. 
 
 ## Core functions
-The core functions carry out computation of the Mandelbrot set for a given region of the complex plane for the given parameter set.    
+The core functions carry out computation of the Mandelbrot set for a given region of the complex plane and parameter set.    
 
 ::: mandelviews.core
 
