@@ -15,7 +15,7 @@ To update to the latest version:
     pip install mandelviews --upgrade
 
 ## Quick start
-To get started quickly, see the [Quick Start Guide](quick_start.md).
+To get started quickly calculating and visualizing, see the [Quick Start Guide](quick_start.md).
 
 ## Usage guide
 For more detailed usage notes, including some discussion of the theory behind the algorithms, see the [Usage Guide](usage_guide.md).
